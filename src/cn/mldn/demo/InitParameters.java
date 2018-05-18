@@ -15,4 +15,5 @@ public class InitParameters {
 			e.printStackTrace();
 		}
 	}
+
 }
