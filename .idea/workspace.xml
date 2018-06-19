@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93d4922d-1021-4cc7-a519-013c5a0c0c69" name="Default" comment="">
+    <list default="true" id="93d4922d-1021-4cc7-a519-013c5a0c0c69" name="Default" comment="edit 16">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -34,8 +34,17 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="150">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/mldn/advanced/TestDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -49,6 +58,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/cn/mldn/advanced</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -59,10 +73,10 @@
         <option value="$PROJECT_DIR$/src/cn/mldn/test/MyMathTest.java" />
         <option value="$PROJECT_DIR$/src/cn/mldn/advanced/EncodingDemo.java" />
         <option value="$PROJECT_DIR$/src/cn/mldn/advanced/CopyFileDemo.java" />
-        <option value="$PROJECT_DIR$/src/cn/mldn/advanced/TestDemo.java" />
         <option value="$PROJECT_DIR$/src/cn/mldn/advanced/test2.java" />
         <option value="$PROJECT_DIR$/src/cn/mldn/advanced/FileIODemo.java" />
         <option value="$PROJECT_DIR$/src/cn/mldn/demo/Test.java" />
+        <option value="$PROJECT_DIR$/src/cn/mldn/advanced/TestDemo.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -129,11 +143,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="mldn" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DemoProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DemoProject" type="462c0819:PsiDirectoryNode" />
-              <item name="test_file" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -296,7 +305,7 @@
       <option name="presentableId" value="Default" />
       <updated>1529382834088</updated>
       <workItem from="1529382838490" duration="9369000" />
-      <workItem from="1529396651094" duration="1016000" />
+      <workItem from="1529396651094" duration="1269000" />
     </task>
     <task id="LOCAL-00001" summary="edit 12">
       <created>1529397523438</created>
@@ -312,11 +321,25 @@
       <option name="project" value="LOCAL" />
       <updated>1529397614717</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="edit 14">
+      <created>1529397723862</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1529397723862</updated>
+    </task>
+    <task id="LOCAL-00004" summary="edit 16">
+      <created>1529397887423</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1529397887423</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10385000" />
+    <option name="totallyTimeSpent" value="10638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="23" width="1260" height="737" extended-state="0" />
@@ -331,13 +354,14 @@
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.26190478" side_tool="true" weight="0.23227753" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.7380952" visible="true" weight="0.23227753" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.7380952" weight="0.23227753" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32880846" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="6" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -347,7 +371,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="5" />
     </layout>
@@ -361,7 +384,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="edit 12" />
     <MESSAGE value="edit 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit 13" />
+    <MESSAGE value="edit 14" />
+    <MESSAGE value="edit 15" />
+    <MESSAGE value="edit 16" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit 16" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -427,13 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/mldn/advanced/TestDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/mldn/advanced/CopyFileDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -454,6 +473,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/mldn/advanced/TestDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/mldn/demo/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -465,13 +494,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="150">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>

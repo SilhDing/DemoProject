@@ -8,6 +8,7 @@ __pycache__/
 
 # IntelliJ
 .idea
+.idea/workspace.xml
 
 # java file
 *.class
