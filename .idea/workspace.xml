@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93d4922d-1021-4cc7-a519-013c5a0c0c69" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/cn/mldn/advanced/TestDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/mldn/advanced/CopyFileDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/mldn/advanced/CopyFileDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/mldn/test/MyMathTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_file/my.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_file/my.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/MacbookofSilhouette.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +22,8 @@
       <file leaf-file-name="FileIODemo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/mldn/advanced/FileIODemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+            <state relative-caret-position="300">
+              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -50,6 +49,7 @@
         <option value="$PROJECT_DIR$/src/cn/mldn/advanced/CopyFileDemo.java" />
         <option value="$PROJECT_DIR$/src/cn/mldn/advanced/TestDemo.java" />
         <option value="$PROJECT_DIR$/src/cn/mldn/advanced/test2.java" />
+        <option value="$PROJECT_DIR$/src/cn/mldn/advanced/FileIODemo.java" />
       </list>
     </option>
   </component>
@@ -63,7 +63,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="348" />
+    <option name="x" value="20" />
     <option name="y" value="23" />
     <option name="width" value="1260" />
     <option name="height" value="737" />
@@ -109,6 +109,11 @@
               <item name="advanced" type="462c0819:PsiDirectoryNode" />
               <item name="ComparatorDemo.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
+            <path>
+              <item name="DemoProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DemoProject" type="462c0819:PsiDirectoryNode" />
+              <item name="test_file" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -119,7 +124,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -270,15 +275,16 @@
       <option name="presentableId" value="Default" />
       <updated>1529382834088</updated>
       <workItem from="1529382838490" duration="9369000" />
-      <workItem from="1529396651094" duration="230000" />
+      <workItem from="1529396651094" duration="709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9599000" />
+    <option name="totallyTimeSpent" value="10078000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="23" width="1260" height="737" extended-state="0" />
+    <frame x="20" y="23" width="1260" height="737" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -315,6 +321,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/Comparator.java">
@@ -385,10 +396,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_file/005.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_file/my.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/mldn/advanced/FileIODemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+        <state relative-caret-position="300">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
         </state>
       </provider>
     </entry>
