@@ -4,6 +4,13 @@ import java.lang.reflect.Method;
 
 public class ReflectMethodDemo {
 
+	/**
+	 * @Description:    Description
+	 * @Package:        cn.mldn.advanced
+	 * @ClassName:      ReflectMethodDemo
+	 * @Author:         Yihang Ding
+	 * @Date:           2018/6/19 21:48
+	 **/
 	public static void main(String[] args) throws Exception {
 		String fieldName = "title";
 		
@@ -18,6 +25,15 @@ public class ReflectMethodDemo {
 	}
 	
 	public static String initCap(String str) {
+		/**
+		 * @descroption     Description
+		 * @method          initCap
+		 * @author          Yihang Ding
+		 *
+		 * @parameters      [str]
+		 * @return          java.lang.String
+		 * @date            2018/6/19 21:48
+		 **/
 		return str.substring(0,1).toUpperCase() + str.substring(1);
 	}
 

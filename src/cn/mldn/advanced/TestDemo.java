@@ -1,5 +1,9 @@
 package cn.mldn.advanced;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
 /**
  * @Description: A test file for some extra coding
  * @ProjectName: DemoProject
@@ -47,10 +51,15 @@ class Test {
 }
 
 public class TestDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("test file!!!That ");
         Test test = new Test("yihang", 33);
         System.out.println(test.toString());
+
+        File file = new File("/Users/MacbookofSilhouette/Coding/java/eclipse/DemoProject/test_file/my.txt");
+        OutputStream output = new FileOutputStream(file, true);
+        output.write("得的很多和我的和电荷".getBytes("UTF-8")); //不适用utf-8的话，可能就有乱码！！
+        output.close();
 
     }
 }
