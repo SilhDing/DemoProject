@@ -1,10 +1,7 @@
 package cn.mldn.advanced;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
+
 
 public class CopyFileDemo {
 
@@ -12,7 +9,7 @@ public class CopyFileDemo {
 		long start = System.currentTimeMillis();
 		
 		if (args.length != 2) {
-			System.out.println("there should be 2 arguements!");
+			System.out.println("there should be 2 arguments!");
 			System.exit(1);
 		}
 		
@@ -45,6 +42,9 @@ public class CopyFileDemo {
 		long end = System.currentTimeMillis();
 		System.out.println("Total time: " + (end - start));
 		System.out.println(count);
+
+
+
 		
 	}
 
