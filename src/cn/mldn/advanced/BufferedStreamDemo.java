@@ -43,7 +43,7 @@ public class BufferedStreamDemo {
 
         File file = new File("/Users/MacbookofSilhouette/Coding/java/eclipse/DemoProject/test_file/my.txt");
         BufferedReader buf3 = new BufferedReader(new FileReader(file));
-        String str3 = null;
+        String str3;
         while((str3 = buf3.readLine()) != null) {
             System.out.println(str3 + "???");
         }
