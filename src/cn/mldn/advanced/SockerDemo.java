@@ -5,7 +5,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 /**
- * @Description: Despription
+ * @Description: 请和ServerSocketDemo配合食用
  * @ProjectName: DemoProject
  * @Package: cn.mldn.advanced
  * @Author: Yihang Ding
@@ -27,6 +27,5 @@ public class SockerDemo {
 
         scan.close();
         client.close();
-
     }
 }

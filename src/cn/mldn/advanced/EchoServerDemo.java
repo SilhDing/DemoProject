@@ -1,31 +1,26 @@
 package cn.mldn.advanced;
 
 import java.io.IOException;
-import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 /**
- * @Description: 请和SocketDemo配合食用
+ * @Description: 经典程序ECHO的服务器部分，和EchoClientDemo配合食用最佳
  * @ProjectName: DemoProject
  * @Package: cn.mldn.advanced
  * @Author: Yihang Ding
- * @CreateDate: 2018/6/22 22:58
+ * @CreateDate: 2018/6/23 00:17
  * @UpdateUser: Yihang Ding
- * @UpdateDate: 2018/6/22 22:58
+ * @UpdateDate: 2018/6/23 00:17
  * @UpdateRemark: The modified content
  * @Version: 1.0
  **/
-public class ServerSocketDemo {
+public class EchoServerDemo {
     public static void main(String[] args) throws IOException {
         ServerSocket server = new ServerSocket(9999);
-        System.out.println("Wait for client");
         Socket client = server.accept();
 
-        PrintStream out = new PrintStream(client.getOutputStream());
-        out.println("Hello!");
-        out.close();
-        client.close();
-        server.close();
+        Scanner scan = new Scanner(client.getInputStream());
     }
 }
