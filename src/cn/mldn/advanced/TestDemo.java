@@ -1,8 +1,9 @@
 package cn.mldn.advanced;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * @Description: A test file for some extra coding
@@ -50,16 +51,28 @@ class Test {
     }
 }
 
+class TestComparator implements Comparator<Test> {
+
+
+    @Override
+    public int compare(Test o1, Test o2) {
+        return o1.getId() - o2.getId();
+    }
+}
+
 public class TestDemo {
     public static void main(String[] args) throws Exception {
-        System.out.println("test file!!!That ");
-        Test test = new Test("yihang", 33);
-        System.out.println(test.toString());
+        Queue<int[]> pq = new PriorityQueue<>((a, b) -> (b[0] - a[0]));
+        pq.add(new int[]{12,0});
+        pq.add(new int[]{15,4});
+        pq.add(new int[]{10,2});
+        int n = pq.size();
+        for (int i = 0; i < n; i++) {
+            int[] arr = pq.poll();
+            System.out.println(Arrays.toString(arr));
+        }
 
-        File file = new File("/Users/MacbookofSilhouette/Coding/java/eclipse/DemoProject/test_file/my.txt");
-        OutputStream output = new FileOutputStream(file, true);
-        output.write("得的很多和我的和电荷".getBytes("UTF-8")); //不适用utf-8的话，可能就有乱码！！
-        output.close();
+        char[] arr = new char[] {'a','r'};
 
     }
 }
