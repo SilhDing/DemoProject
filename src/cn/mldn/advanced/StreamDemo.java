@@ -37,5 +37,9 @@ public class StreamDemo {
         Stream<String> stream_3 = all.stream();
         List<String> newAll_3 = stream_3.map((x) -> x.toLowerCase()).distinct().filter((x) -> x.contains("h")).collect(Collectors.toList());
         newAll_3.forEach(System.out::println);
+
+        Stream<String> stream_4 = all.stream();
+        List<String> newAll_4 = stream_4.skip(2).limit(2).collect(Collectors.toList());
+        newAll_4.forEach(System.out::println);
     }
 }
