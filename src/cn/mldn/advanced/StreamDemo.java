@@ -25,6 +25,7 @@ class ShopCar{
     private int amount;
 
     public ShopCar(String pname, double price, int amount) {
+
         this.pname = pname;
         this.price = price;
         this.amount = amount;
@@ -45,6 +46,15 @@ class ShopCar{
 
 public class StreamDemo {
     public static void main(String[] args) {
+        /**
+         * @descroption     Description
+         * @method          main
+         * @author          Yihang Ding
+         *
+         * @param args
+         * @return          void
+         * @date            2018/7/1 16:37
+         */
         List<String> all = new ArrayList<>();
         all.add("Hello");
         all.add("yihang");
@@ -99,9 +109,5 @@ public class StreamDemo {
         System.out.println("average cost: " + dss.getAverage());
         System.out.println("max cost: " + dss.getMax());
         System.out.println("min cost: " + dss.getMin());
-
-
-
-
     }
 }

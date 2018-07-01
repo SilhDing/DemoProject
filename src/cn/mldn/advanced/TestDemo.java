@@ -17,7 +17,15 @@ import java.util.Queue;
  * @Version: 1.0
  **/
 
+
 class Test {
+    /**
+     * @Description:    Description
+     * @Package:        cn.mldn.advanced
+     * @ClassName:      Test
+     * @Author:         Yihang Ding
+     * @Date:           2018/7/1 17:11
+     */
     private String name ;
     private int id;
 
@@ -56,12 +64,31 @@ class TestComparator implements Comparator<Test> {
 
     @Override
     public int compare(Test o1, Test o2) {
+        /**
+         * @descroption     Description
+         * @method          compare
+         * @author          Yihang Ding
+         * @date            2018/7/1 17:11
+         *
+         * @param    o1
+         * @param    o2
+         * @return   int
+         */
         return o1.getId() - o2.getId();
     }
 }
 
 public class TestDemo {
     public static void main(String[] args) throws Exception {
+        /**
+         * @descroption     Description
+         * @method          main
+         * @author          Yihang Ding
+         * @date            2018/7/1 17:11
+         *
+         * @param    args
+         * @return   void
+         */
         Queue<int[]> pq = new PriorityQueue<>((a, b) -> (b[0] - a[0]));
         pq.add(new int[]{12,0});
         pq.add(new int[]{15,4});

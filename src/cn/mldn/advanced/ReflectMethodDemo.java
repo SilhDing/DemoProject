@@ -30,10 +30,10 @@ public class ReflectMethodDemo {
 		 * @method          initCap
 		 * @author          Yihang Ding
 		 *
-		 * @parameters      [str]
+		 * @param str
 		 * @return          java.lang.String
-		 * @date            2018/6/19 21:48
-		 **/
+		 * @date            2018/7/1 16:38
+		 */
 		return str.substring(0,1).toUpperCase() + str.substring(1);
 	}
 
