@@ -22,6 +22,7 @@ public class Stack<Item> {
     }
 
     public boolean isEmpty() {
+        // or: return N == 0;
         return first == null;
     }
 
