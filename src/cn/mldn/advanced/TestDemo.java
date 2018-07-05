@@ -1,9 +1,6 @@
 package cn.mldn.advanced;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @Description: A test file for some extra coding
@@ -99,7 +96,6 @@ public class TestDemo {
             System.out.println(Arrays.toString(arr));
         }
 
-        char[] arr = new char[] {'a','r'};
 
     }
 }
