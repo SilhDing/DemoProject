@@ -1,5 +1,7 @@
 package cn.mldn.util;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Iterator;
 
 /**
@@ -47,6 +49,7 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
         return item;
     }
 
+    @NotNull
     @Override
     public Iterator<Item> iterator() {
         return new ReverseArrayIterator();
