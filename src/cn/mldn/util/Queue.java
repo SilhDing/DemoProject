@@ -17,6 +17,7 @@ public class Queue<Item> {
     private int N;
 
     private class Node {
+        // nested class to define nodes
         Item item;
         Node next;
     }
@@ -30,6 +31,7 @@ public class Queue<Item> {
     }
 
     public void enqueue(Item item) {
+         // add item to the end of the list
         Node oldlast = last;
         last = new Node();
         last.item = item;
@@ -41,6 +43,7 @@ public class Queue<Item> {
     }
 
     public Item dequeue() {
+        // remove item from the beginning of the list
         Item item = first.item;
         first = first.next;
         if (isEmpty()) last = null;
