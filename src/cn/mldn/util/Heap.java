@@ -23,13 +23,6 @@ public class Heap {
 
     }
 
-    private static void swim(Comparable[] a, int k, int N) {
-        while (k > 1 && less(a, k/2, k)) {
-            exch(a, k/2, k);
-            k = k/2;
-        }
-    }
-
     private static void sink(Comparable[] a, int k, int N) {
         while (2*k <= N) {
             int j = 2*k;
@@ -73,6 +66,5 @@ public class Heap {
         sort(a);
         show(a);
     }
-
 
 }
