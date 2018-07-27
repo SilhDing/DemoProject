@@ -1,6 +1,6 @@
 package cn.mldn.util;
 /**
- * @Description: Despription
+ * @Description: 基于ordered array实现的一个ST，主要是binary search来实现查找
  * @ProjectName: DemoProject
  * @Package: cn.mldn.util
  * @Author: Yihang Ding
