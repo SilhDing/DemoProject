@@ -28,7 +28,6 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
-    //------------------------------------------
 
     public int size() {
         return size(root);
@@ -39,14 +38,30 @@ public class BST<Key extends Comparable<Key>, Value> {
         else return x.N;
     }
 
-    //------------------------------------------
+    public void show() {
+        System.out.println(show(root, 0));
+    }
+
+    private StringBuffer show(Node h, int level) {
+        StringBuffer s = new StringBuffer();
+        if (h != null) {
+            s.append(show(h.right, level + 1));
+            for (int i = 0; i < level; i++) {
+                s.append("| ");
+            }
+            s.append(h.key).append("\n");
+            s.append(show(h.left, level + 1));
+        }
+        return s;
+    }
+
 
     public Key min() {
         return min(root).key;
     }
 
     private Node min(Node x) {
-        if (x == null) return x;
+        if (x.left == null) return x;
         return min(x.left);
         // or the iterative way
         /*
@@ -60,11 +75,10 @@ public class BST<Key extends Comparable<Key>, Value> {
     }
 
     private Node max(Node x) {
-        if (x == null) return x;
+        if (x.right == null) return x;
         return max(x.right);
     }
 
-    //------------------------------------------
 
     public void deleteMin() {
         root = deleteMin(root);
@@ -89,7 +103,6 @@ public class BST<Key extends Comparable<Key>, Value> {
         return x;
     }
 
-    //------------------------------------------
 
     public Value get(Key key) {
         return get(root, key);
@@ -122,7 +135,6 @@ public class BST<Key extends Comparable<Key>, Value> {
         return x;
     }
 
-    //------------------------------------------
 
     public Key floor(Key key) {
         Node x = floor(root, key);
@@ -163,8 +175,6 @@ public class BST<Key extends Comparable<Key>, Value> {
         else return t;
     }
 
-    //------------------------------------------
-
     public Key select(int k) {
         return select(root, k).key;
     }
@@ -193,7 +203,6 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     }
 
-    //------------------------------------------
 
     public void delete(Key key) {
         delete(root, key);
@@ -219,7 +228,6 @@ public class BST<Key extends Comparable<Key>, Value> {
         return x;
     }
 
-    //------------------------------------------
 
     public Iterable<Key> keys() {
         return keys(min(), max());
@@ -240,6 +248,15 @@ public class BST<Key extends Comparable<Key>, Value> {
         if (cmplo < 0) keys(x.left, queue, lo, hi);
         if (cmplo <= 0 && cmphi >= 0) keys(x.right, queue, lo, hi);
         if (cmphi > 0) keys(x.right, queue, lo, hi);
+    }
+
+    public static void main(String[] args) {
+        BST<Integer, Integer> map = new BST<>();
+        map.put(3,0);
+        map.put(1,0);
+        map.put(6,5);
+        map.put(5,5);
+        map.show();
     }
 
 }
