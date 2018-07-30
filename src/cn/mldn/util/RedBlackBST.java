@@ -155,6 +155,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     private Node balance(Node h) {
         // you may regard this method as a standard way to fix up the 2-3 tree with the rules specified
         if (isRed(h.right) && !isRed(h.left)) h = rotateLeft(h);
+        // OR if (isRed(h.right)) is enough. But it is redundant
         if (isRed(h.left) && isRed(h.left.left)) h = rotateRight(h);
         if (isRed(h.left) && isRed(h.right)) flipColors(h);
 
@@ -204,10 +205,11 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
 
     private Node deleteMax(Node h) {
         if (isRed(h.left)) {
-            // deleteMax()这里为什么会有这么一个，而deleteMin()没有？
+            // deleteMax()这里为什么会有这么一个，而deleteMin()没有？因为h.right不可能是red啊
             // 删除最右边元素的时候，左边还有可能有red的（为什么一定是red？去看书上的解释）
             // 删除最左边的时候，右边会有东西吗？
-            // 不会。因为首先，右边有东西，那就相当于是插入的，但是插入的话，只可能red插入，会放去左边
+            // 不会。因为首先，右边有东西，那就相当于是1.插入的，但是插入的话，只可能red插入，会放去左边
+            // 2. 左边被删除过，但是删除的话，就得在3-node中删除，删完了还会修正，不可能在右边留东西的
             h = rotateRight(h);
         }
         if (h.right == null) return null;
@@ -253,11 +255,10 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         map.put('C', 0);
         map.put('H', 0);
         map.put('X', 0);
-        map.deleteMax();
-        map.show();
-        map.delete('C');
         map.show();
         map.put('B', 0);
+        map.show();
+        map.delete('E');
         map.show();
     }
 }
