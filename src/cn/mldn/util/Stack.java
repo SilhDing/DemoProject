@@ -1,5 +1,7 @@
 package cn.mldn.util;
 
+import java.util.Iterator;
+
 /**
  * @Description: Pushdown stack (linked-list implementation)
  * @ProjectName: DemoProject
@@ -11,7 +13,7 @@ package cn.mldn.util;
  * @UpdateRemark: The modified content
  * @Version: 1.0
  */
-public class Stack<Item> {
+public class Stack<Item> implements Iterable<Item>{
     private Node first;
     private int N;
 
@@ -45,5 +47,25 @@ public class Stack<Item> {
         first = first.next;
         N --;
         return item;
+    }
+
+    public Iterator<Item> iterator() {
+        return new StackIterator();
+    }
+
+    private class StackIterator implements Iterator<Item> {
+        private Node current = first;
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public Item next() {
+            Item item = current.item;
+            current = current.next;
+            return item;
+        }
     }
 }

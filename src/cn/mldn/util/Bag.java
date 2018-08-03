@@ -42,7 +42,7 @@ public class Bag<Item> implements Iterable<Item> {
 
         @Override
         public boolean hasNext() {
-            return current == null;
+            return current != null;
         }
 
         @Override
@@ -51,5 +51,12 @@ public class Bag<Item> implements Iterable<Item> {
             current = current.next;
             return item;
         }
+    }
+
+    public static void main(String[] args) {
+        Bag<Integer> b = new Bag<>();
+        b.add(1);
+        b.add(2);
+        for(int i: b) System.out.println(i);
     }
 }
