@@ -57,10 +57,6 @@ public class BreadthFirstPaths {
         return path;
     }
 
-    public String toString() {
-        return "what you print is a graph";
-    }
-
     public static void main(String[] args) {
         Graph g = new Graph(6);
         g.addEdge(0, 1);
