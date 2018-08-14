@@ -44,6 +44,7 @@ public class Graph {
         return adj[v];
     }
 
+    @Override
     public String toString() {
         String s = V + " vertices, " + E + " edges\n";
         for (int v = 0; v < V; v ++) {
