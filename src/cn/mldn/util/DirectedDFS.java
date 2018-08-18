@@ -19,6 +19,9 @@ public class DirectedDFS {
         dfs(G, s);
     }
     public DirectedDFS(Digraph G, Iterable<Integer> sources) {
+        // It is not hard here
+        // if we want to find whether it is reachable from s to v, we may dfs(G, s) and
+        // then see if marked[v] == true;
         marked = new boolean[G.V()];
         for (int s: sources) {
             if (!marked[s]) dfs(G, s);
