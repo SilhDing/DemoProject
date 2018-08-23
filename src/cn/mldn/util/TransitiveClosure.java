@@ -1,6 +1,8 @@
 package cn.mldn.util;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * @Description: Despription
@@ -53,5 +55,21 @@ public class TransitiveClosure {
         }
 
         System.out.println(closure.reachable(3,2));
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>(2, (o1, o2) -> (o2 - o1));
+        pq.add(2);
+        pq.add(4);
+        pq.add(5);
+        pq.add(3);
+        while (!pq.isEmpty()) {
+            System.out.println(pq.poll());
+        }
+
+        Arrays.sort(new int[][]{{1, 2}, {0, 4}}, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return 0;
+            }
+        });
     }
 }
