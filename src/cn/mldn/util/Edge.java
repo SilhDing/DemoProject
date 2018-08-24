@@ -36,6 +36,7 @@ public class Edge implements Comparable<Edge> {
     }
 
     public int other(int vertex) {
+        // return another vertex
         if (vertex == v) return w;
         else if (vertex == w) return v;
         else throw new RuntimeException("Inconsistent edge");
