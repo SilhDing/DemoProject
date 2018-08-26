@@ -49,7 +49,7 @@ public class PrimMST {
             if (marked[w]) continue; // w is in the tree already and the edge is not eligible
             if (e.weight() < distTo[w]) {
 
-                // now we find a shorted edge connecting w to the tree
+                // now we find a shorter edge connecting w to the tree
                 distTo[w] = e.weight();
 
                 // the old edge shoule be removed from the pq,
