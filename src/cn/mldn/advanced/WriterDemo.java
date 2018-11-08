@@ -14,7 +14,7 @@ public class WriterDemo {
 		
 		Writer out = new FileWriter(file, true);
 		
-		String str = "这是通过write写进来的内容";
+		String str = "这是通过write写进来的内容\n";
 		out.write(str);
 		out.close();
 	}
