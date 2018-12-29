@@ -1,13 +1,15 @@
-package cn.mldn.util;
+package cn.mldn.util.Graph;
+
+import cn.mldn.util.Bag;
 
 /**
- * @Description: Despription
+ * @Description: This is the basix definition of undirected graph
  * @ProjectName: DemoProject
- * @Package: cn.mldn.util
+ * @Package: cn.mldn.util.Graph
  * @Author: Yihang Ding
- * @CreateDate: 2018/8/2 16:47
+ * @CreateDate: 2018/12/28 17:03
  * @UpdateUser: Yihang Ding
- * @UpdateDate: 2018/8/2 16:47
+ * @UpdateDate: 2018/12/28 17:03
  * @UpdateRemark: The modified content
  * @Version: 1.0
  */
@@ -20,21 +22,22 @@ public class Graph {
     public Graph(int V) {
         this.V = V;
         this.E = 0;
-        adj = (Bag<Integer>[]) new Bag[V]; // 这里的bag是基于链表实现的
-        for (int v = 0; v < V; v ++) {
+        adj = (Bag<Integer>[]) new Bag[V];
+        for (int v = 0; v < V; v++) {
             adj[v] = new Bag<Integer>();
         }
     }
 
     public int V() {
-        return V;
+        return this.V;
     }
 
     public int E() {
-        return E;
+        return this.E;
     }
 
     public void addEdge(int v, int w) {
+        // there is no delete method in Bag structure
         adj[v].add(w);
         adj[w].add(v);
         E ++;
@@ -47,22 +50,26 @@ public class Graph {
     @Override
     public String toString() {
         String s = V + " vertices, " + E + " edges\n";
-        for (int v = 0; v < V; v ++) {
+        for (int v = 0; v < this.V(); v++) {
             s += v + ": ";
-            for (int w: this.adj(v))
-                s += w + " ";
+            for (int w : this.adj(v))
+                s += w +" ";
             s += "\n";
         }
         return s;
     }
 
+    // some static methods
+    // compute the degree of v in graph G
     public static int degree(Graph G, int v) {
         int degree = 0;
         for (int w: G.adj(v)) degree ++;
         return degree;
     }
 
+    // return the max degree of all vertex in the graph G
     public static int maxDegree(Graph G) {
+
         int max = 0;
         for (int v = 0; v < G.V(); v++) {
             max = Math.max(max, degree(G, v));
@@ -70,33 +77,32 @@ public class Graph {
         return max;
     }
 
+    // return the average degree of graph G
     public static double avgDegree(Graph G) {
-        return 2.0*G.E()/G.V();
+        return 2.0 * G.E() / G.V();
     }
 
-    public static double numberOfSelfLoops(Graph G) {
+    // count self-loops
+    public static int numberOfSelfLoops(Graph G) {
         int count = 0;
-        for (int v = 0; v < G.V(); v ++) {
+        for (int v = 0; v < G.V(); v++) {
             for (int w: G.adj(v)) {
                 if (v == w) count ++;
             }
         }
-        return count/2;
+
+        return count / 2;
     }
 
     public static void main(String[] args) {
-        Graph g = new Graph(5);
-        g.addEdge(0, 1);
-        g.addEdge(0, 0);
-        g.addEdge(2, 1);
-        g.addEdge(0, 4);
-        g.addEdge(3, 1);
-        g.addEdge(2, 3);
-        System.out.println(g);
-        System.out.println(Graph.numberOfSelfLoops(g));
-        System.out.println(Graph.avgDegree(g));
-        System.out.println(Graph.degree(g, 2));
-        System.out.println(Graph.maxDegree(g));
 
+        // a small test
+        Graph G = new Graph(5);
+        G.addEdge(0, 1);
+        G.addEdge(2, 1);
+        G.addEdge(3, 4);
+        G.addEdge(3, 2);
+        System.out.println(G);
     }
+
 }
