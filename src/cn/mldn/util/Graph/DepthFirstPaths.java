@@ -51,4 +51,26 @@ public class DepthFirstPaths {
         path.push(s);
         return path;
     }
+
+    public static void main(String[] args) {
+        Graph G = new Graph(5);
+        G.addEdge(0, 1);
+        G.addEdge(2, 1);
+        G.addEdge(3, 4);
+        G.addEdge(4, 2);
+        int s = 0;
+
+        // this is to demonstrate how to use this method
+        DepthFirstPaths search = new DepthFirstPaths(G, s);
+        for (int v = 0; v < G.V(); v++) {
+            System.out.print(s + " to " + v + ": ");
+            if (search.hasPathTo(v)) {
+                for (int x: search.pathTo(v)) {
+                    if (x == s) System.out.print(x);
+                    else System.out.print("-" + x);
+                }
+            }
+            System.out.println();
+        }
+    }
 }
