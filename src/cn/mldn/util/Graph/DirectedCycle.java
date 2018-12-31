@@ -38,7 +38,7 @@ public class DirectedCycle {
                 edgeTo[w] = v;
                 dfs(G, w);
             } else if (onStack[w]) {
-                // a cycle is detected
+                // a cycle is detected then store it in a stack
                 cycle = new Stack<>();
                 for (int x = v; x != w; x = edgeTo[x]) {
                     cycle.push(x);
