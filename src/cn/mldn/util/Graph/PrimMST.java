@@ -60,8 +60,8 @@ public class PrimMST {
             if (marked[w]) continue; // already on the tree; ineligible
             if (e.weight() < distTo[w]) {
                 // need update
-                if (edgeTo[w] != null && pq.contains(edgeTo[w])){
-                    // in fact, we may remove without the judgment
+                if (pq.contains(edgeTo[w])){
+                    // in fact, we may remove without the checking
                     // as remove will not report error if edgeTo[w] does not exist in pq or is null
                     pq.remove(edgeTo[w]);
                 }
