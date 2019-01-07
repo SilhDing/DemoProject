@@ -48,7 +48,7 @@ public class EdgeWeightedGraph {
     public Iterable<Edge> edges() {
         Bag<Edge> bag = new Bag<>();
         for (int v = 0; v < this.V; v++) {
-            for (Edge e: adj(v)) {
+            for (Edge e: adj[v]) {
                 if (e.other(v) > v) bag.add(e);
             }
         }
