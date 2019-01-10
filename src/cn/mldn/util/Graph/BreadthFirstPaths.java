@@ -37,7 +37,7 @@ public class BreadthFirstPaths {
         while (!queue.isEmpty()) {
             int v = queue.dequeue();
             for (int w: G.adj(v)) {
-                if (marked[w]) {
+                if (!marked[w]) {
                     edgeTo[w] = v;
                     marked[w] = true;
                     queue.enqueue(w);

@@ -15,11 +15,16 @@ import cn.mldn.util.Bag;
  */
 public class CPM {
 
+    AcyclicLP lp;
+    int s; // start vertex
+    int t; // end vertex
+
     public CPM(Job[] jobs) {
         int N = jobs.length; // the number of all jobs
         EdgeWeightedDigraph G = new EdgeWeightedDigraph(2*N + 2);
 
-        int s = 2*N, t = 2*N + 1;
+        s = 2*N;
+        t = 2*N + 1;
         for (int i = 0; i < N; i++) {
             // visit every job
 
@@ -40,12 +45,15 @@ public class CPM {
             }
 
         }
-        AcyclicLP lp = new AcyclicLP(G, s); // find lp from s to t
-        System.out.println("Start time:");
-        for (int i = 0; i < N; i++) {
-            System.out.println(i + ": "+ lp.distTo(i));
-        }
-        System.out.println("Finish time: " + lp.distTo(t));
+        lp = new AcyclicLP(G, s); // find lp from s to t
+    }
+
+    public double startTime(int jobID) {
+        return lp.distTo(jobID);
+    }
+
+    public double longestTime() {
+        return lp.distTo(t);
     }
 
     public static void main(String[] args) {
@@ -62,6 +70,12 @@ public class CPM {
         jobs[9] = new Job(9, 29, 4, 6);
 
         CPM cpm = new CPM(jobs);
+
+        System.out.println("Start time:");
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i + ": " + cpm.startTime(i));
+        }
+        System.out.println("Finish time: " + cpm.longestTime());
     }
 }
 
@@ -76,7 +90,7 @@ class Job {
         this.precedence = new Bag<>();
 
         for (int i = 0; i < data.length; i++) {
-            this.precedence.add(i);
+            this.precedence.add(data[i]);
         }
     }
 }
