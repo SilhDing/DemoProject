@@ -14,32 +14,32 @@ import java.util.Arrays;
  * @Version: 1.0
  */
 public class LSD {
-
     public static void sort(String[] a, int W) {
-        // W is the length of strings in a
+        // W is the length of each string in a
         int N = a.length;
         int R = 256;
-        String aux[] = new String[N];
+        String[] aux = new String[N];
 
         for (int d = W - 1; d >= 0; d--) {
+            // Sort by key-indexed counting on dth char.
 
-            // compute frequency
-            int count[] = new int[R+1];
+            int[] count = new int[R+1];
+            // Computer frequency counts.
             for (int i = 0; i < N; i++) {
-                count[a[i].charAt(d)+1] ++;
+                count[a[i].charAt(d) + 1] ++;
             }
 
-            // transfrom counts to indices
-            for (int i = 0; i < R; i++) {
-                count[i+1] += count[i];
+            // Transform counts to indices.
+            for (int r = 0; r < R; r++) {
+                count[r+1] += count[r];
             }
 
-            //distribute
-            for (int i =0 ; i < N; i++) {
+            // Distribute.
+            for (int i = 0; i < N; i++) {
                 aux[count[a[i].charAt(d)]++] = a[i];
             }
 
-            // copy back
+            // Copy back.
             for (int i = 0; i < N; i++) {
                 a[i] = aux[i];
             }

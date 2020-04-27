@@ -28,45 +28,46 @@ public class MSD {
     }
 
     private static void sort(String[] a, int lo, int hi, int d) {
-        // d: digit
-
-        if (hi <= lo + M) {
-            Insertion.sort(a, lo, hi, d); // this methods is special, involving d as an argument
+        // Cut-off if the number of string is too small
+        if (lo + M >= hi) {
+            Insertion.sort(a, lo, hi, d);
             return ;
         }
 
-        System.out.println(lo + " " + hi + " " + d);
-
-        // compute frequency counts
         int[] count = new int[R+2];
-        for (int i = lo; i <= hi; i ++) {
+        // Compute frequency counts.
+        for (int i = lo; i <= hi; i++) {
             count[charAt(a[i], d) + 2] ++;
         }
 
-        // transform counts to indices
-        for (int i = 0; i < R + 1; i++) {
+        // Transfrom counts to indices.
+        for (int i = 0; i < R +1; i++) {
             count[i+1] += count[i];
         }
 
-        //distribution
+        // Distribute.
         for (int i = lo; i <= hi; i++) {
             aux[count[charAt(a[i], d) + 1]++] = a[i];
         }
 
-        // copy back
+        // Copy back.
         for (int i = lo; i <= hi; i++) {
-            a[i] = aux[i-lo];
+            // Consdier why i - lo here: because we only sort hi- lo + 1 strings, starting with index 0 in aux
+            a[i] = aux[i - lo];
         }
 
-        // recursive call
+        // Recursive call: process to the next d for each split
         for (int r = 0; r < R; r++) {
-            sort(a, lo + count[r], lo + count[r+1] - 1, d+1);
+            sort(a, lo + count[r], lo + count[r+1] - 1, d + 1);
         }
+
     }
 
     private static int charAt(String s, int index) {
-        if (index < s.length()) return s.charAt(index);
-        else return -1;
+        if (index < s.length())
+            return s.charAt(index);
+        else
+            return -1;
     }
 
     public static void main(String[] args) {
@@ -74,10 +75,7 @@ public class MSD {
                         "shore", "the", "shells", "she", "sells", "are", "surely", "seashells"};
         sort(a);
         System.out.println(Arrays.toString(a));
-
         String[] b = {"aaaaaa","aaaaaa","aaaaaa","aaaaaa","aaaaaa","aaaaaa","aaaaaa","aaaaaa"};
         sort(b);
     }
-
-
 }
